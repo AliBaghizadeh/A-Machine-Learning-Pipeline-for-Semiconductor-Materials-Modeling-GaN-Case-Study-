@@ -22,8 +22,7 @@ This repository focuses on **code, scripts, and configuration**. Heavy results a
 ## Related Article
 For a higher-level overview of the project, see:
 
-**From DFT to MLIP: A Lightweight Materials Modelling Pipeline for Semiconductor Metrology**  
-https://medium.com/@alibaghizade/from-dft-to-mlip-a-lightweight-materials-modelling-pipeline-for-semiconductor-metrology-a6a6958674a3
+[From DFT to MLIP: A Lightweight Materials Modelling Pipeline for Semiconductor Metrology](https://medium.com/@alibaghizade/from-dft-to-mlip-a-lightweight-materials-modelling-pipeline-for-semiconductor-metrology-a6a6958674a3)
 
 ## Repository Structure
 ```text
