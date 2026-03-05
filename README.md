@@ -1,5 +1,15 @@
 # A Machine Learning Pipeline for Semiconductor Materials Modeling (GaN Case Study)
 
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![GPAW](https://img.shields.io/badge/DFT-GPAW-0B7285?style=for-the-badge)
+![MACE](https://img.shields.io/badge/MLIP-MACE-E67E22?style=for-the-badge)
+![Ollama](https://img.shields.io/badge/LLM-Ollama-1F77B4?style=for-the-badge)
+
+This repository presents a lightweight, offline-first workflow for semiconductor materials modeling, using GaN as the main case study. It connects density functional theory (DFT) reference calculations with machine-learned interatomic potentials (MLIPs) so larger atomic systems can be explored faster without giving up basic validation against physics-based results.
+
+The project is structured as a practical pipeline rather than a loose collection of scripts. It includes dataset extraction, ML potential training, large-cell relaxation, validation gates, and a local demo interface for reviewing results, making it suitable both for reproducible research and for technical demonstrations of an end-to-end materials AI workflow.
+
 Offline-first, reproducible codebase for a practical workflow:
 
 `Crystal structure -> DFT reference labeling -> dataset extraction -> ML potential training -> large-cell relaxation -> quality checks`
