@@ -19,6 +19,12 @@ This repository focuses on **code, scripts, and configuration**. Heavy results a
 - ML potentials are fast but must be checked against reference calculations.
 - Combining both enables scalable, credible materials modeling for semiconductor defect studies.
 
+## Related Article
+For a higher-level overview of the project, see:
+
+**From DFT to MLIP: A Lightweight Materials Modelling Pipeline for Semiconductor Metrology**  
+https://medium.com/@alibaghizade/from-dft-to-mlip-a-lightweight-materials-modelling-pipeline-for-semiconductor-metrology-a6a6958674a3
+
 ## Repository Structure
 ```text
 .
@@ -77,4 +83,4 @@ make demo
 Open the shown local URL to explore pipeline status, quality checks, ML relaxation demo, RAG assistant, and STEM outputs.
 
 ## License
-Add your preferred license file (`LICENSE`) before public reuse.
+This project is licensed under the MIT License. See [`LICENSE`](LICENSE).
