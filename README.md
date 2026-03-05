@@ -6,11 +6,13 @@
 ![MACE](https://img.shields.io/badge/MLIP-MACE-E67E22?style=for-the-badge)
 ![Ollama](https://img.shields.io/badge/LLM-Ollama-1F77B4?style=for-the-badge)
 
-This repository presents a lightweight, offline-first workflow for semiconductor materials modeling, using GaN as the main case study. It connects density functional theory (DFT) reference calculations with machine-learned interatomic potentials (MLIPs) so larger atomic systems can be explored faster without giving up basic validation against physics-based results.
+This repository presents a lightweight workflow for semiconductor materials modeling, using GaN as the main case study. It connects density functional theory (DFT) reference calculations with machine-learned interatomic potentials (MLIPs) so larger atomic systems can be explored faster without giving up basic validation against physics-based results.
 
 The project is structured as a practical pipeline rather than a loose collection of scripts. It includes dataset extraction, ML potential training, large-cell relaxation, validation gates, and a local demo interface for reviewing results, making it suitable both for reproducible research and for technical demonstrations of an end-to-end materials AI workflow.
 
-Offline-first, reproducible codebase for a practical workflow:
+Only the demo interface is offline-first by default. The full project is compute-oriented and can be run on local workstations, HPC clusters, or cloud GPU environments depending on your DFT and ML training needs.
+
+Reproducible codebase for a practical workflow:
 
 `Crystal structure -> DFT reference labeling -> dataset extraction -> ML potential training -> large-cell relaxation -> quality checks`
 
@@ -29,10 +31,20 @@ This repository focuses on **code, scripts, and configuration**. Heavy results a
 - ML potentials are fast but must be checked against reference calculations.
 - Combining both enables scalable, credible materials modeling for semiconductor defect studies.
 
+## How This Scales and Extends
+- **Larger structures:** train on curated DFT labels, then run ML relaxations on much larger supercells that are impractical for routine DFT-only loops.
+- **Active learning:** add uncertain or failure-case structures back into DFT labeling, then retrain to improve model coverage iteratively.
+- **Metrology workflows:** connect relaxed structures to synthetic observables (for example STEM-like simulations) to support interpretation of experimental signals.
+- **Materials design workflows:** use the trained potential for fast screening of defect configurations, strain states, and composition variants before expensive DFT confirmation.
+- **Deployment flexibility:** keep the same scripts/configs while scaling execution from laptop prototyping to cluster/cloud orchestration.
+
 ## Core Packages
-- [MACE - Machine Learning Force Fields](https://mace-docs.readthedocs.io/en/latest/)
-- [abTEM](https://abtem.readthedocs.io/en/latest/intro.html#)
-- [GPAW](https://gpaw.readthedocs.io/#)
+- [MACE (mace-torch)](https://github.com/ACEsuit/mace) - ML interatomic potential framework used for training/inference
+- [PyTorch](https://pytorch.org/) - deep learning backend for MACE
+- [ASE (Atomic Simulation Environment)](https://wiki.fysik.dtu.dk/ase/) - structure I/O and atomistic optimization workflow
+- [GPAW](https://gpaw.readthedocs.io/) - DFT reference calculations
+- [Streamlit](https://streamlit.io/) - local demo UI
+- [abTEM](https://abtem.readthedocs.io/) *(optional)* - STEM image simulation
 
 ## Related Article
 For a higher-level overview of the project, see:
