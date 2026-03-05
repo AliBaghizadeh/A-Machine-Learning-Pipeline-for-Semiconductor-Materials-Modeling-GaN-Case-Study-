@@ -29,6 +29,11 @@ This repository focuses on **code, scripts, and configuration**. Heavy results a
 - ML potentials are fast but must be checked against reference calculations.
 - Combining both enables scalable, credible materials modeling for semiconductor defect studies.
 
+## Core Packages
+- [MACE - Machine Learning Force Fields](https://mace-docs.readthedocs.io/en/latest/)
+- [abTEM](https://abtem.readthedocs.io/en/latest/intro.html#)
+- [GPAW](https://gpaw.readthedocs.io/#)
+
 ## Related Article
 For a higher-level overview of the project, see:
 
