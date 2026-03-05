@@ -33,3 +33,7 @@ app/demo_data/stem/
 !app/demo_data/plots/**
 !app/demo_data/rag/
 !app/demo_data/rag/**
+
+# Local key artifacts (never commit)
+ali
+ali.pub

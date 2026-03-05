@@ -100,7 +100,7 @@ def main():
     )
     privacy = read_text_if_exists(Path(__file__).resolve().parents[1] / "docs" / "privacy.md")
     if privacy:
-        with st.expander("Privacy details (docs/privacy.md)"):
+        with st.expander("Privacy details"):
             st.markdown(privacy)
 
     st.subheader("📍 Data Locations (Repo-Relative)")
@@ -116,7 +116,7 @@ def main():
 
     arch = read_text_if_exists(Path(__file__).resolve().parents[1] / "docs" / "architecture.md")
     if arch:
-        with st.expander("📚 Architecture (docs/architecture.md)"):
+        with st.expander("📚 Architecture details"):
             st.markdown(arch)
 
     st.info("Tip: run `make demo-artifacts` to refresh app/demo_data from your latest local runs.")
