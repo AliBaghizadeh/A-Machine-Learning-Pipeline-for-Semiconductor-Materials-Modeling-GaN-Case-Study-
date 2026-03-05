@@ -1,0 +1,45 @@
+{
+  "created": "2026-03-03T14:41:27.270807",
+  "supercell": [
+    3,
+    3,
+    2
+  ],
+  "bulk": {
+    "id": "GaN_bulk_sc_3x3x2",
+    "cif": "/mnt/c/Ali/microscopy datasets/MLIP/dft/structures/GaN_bulk_sc_3x3x2.cif",
+    "natoms": 72
+  },
+  "line": {
+    "id": "GaN_defect_line_V_N_sc_3x3x2",
+    "cif": "/mnt/c/Ali/microscopy datasets/MLIP/dft/structures/GaN_defect_line_V_N_sc_3x3x2.cif",
+    "natoms": 70,
+    "removed_indices_in_bulk": [
+      38,
+      34
+    ],
+    "n_removed": 2
+  },
+  "variants": {
+    "rattles": [
+      {
+        "id": "GaN_defect_line_V_N_sc_3x3x2__rattle02_00",
+        "cif": "/mnt/c/Ali/microscopy datasets/MLIP/dft/structures/GaN_defect_line_V_N_sc_3x3x2__rattle02_00.cif",
+        "natoms": 70,
+        "seed": 93000
+      },
+      {
+        "id": "GaN_defect_line_V_N_sc_3x3x2__rattle02_01",
+        "cif": "/mnt/c/Ali/microscopy datasets/MLIP/dft/structures/GaN_defect_line_V_N_sc_3x3x2__rattle02_01.cif",
+        "natoms": 70,
+        "seed": 93010
+      }
+    ],
+    "strain": {
+      "id": "GaN_defect_line_V_N_sc_3x3x2__strain00",
+      "cif": "/mnt/c/Ali/microscopy datasets/MLIP/dft/structures/GaN_defect_line_V_N_sc_3x3x2__strain00.cif",
+      "natoms": 70,
+      "seed": 664000
+    }
+  }
+}

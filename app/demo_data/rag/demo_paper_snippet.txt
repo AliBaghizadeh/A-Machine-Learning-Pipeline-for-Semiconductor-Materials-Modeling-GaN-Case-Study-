@@ -1,0 +1,10 @@
+Demo-only snippet (not a real paper).
+
+Typical GaN DFT setup notes (example):
+- Exchange-correlation: PBE (GGA)
+- Plane-wave cutoff: 350-500 eV (often reported as ecut or PW cutoff)
+- k-point mesh: e.g. 6x6x4 for wurtzite conventional cell, scaled for supercells
+- Smearing: Fermi-Dirac, width ~0.1 eV
+- SCF convergence: energy 1e-4 to 1e-3 eV, density ~1e-3 to 1e-2
+- PAW setups / pseudopotentials: standard PAW; details vary by code
+

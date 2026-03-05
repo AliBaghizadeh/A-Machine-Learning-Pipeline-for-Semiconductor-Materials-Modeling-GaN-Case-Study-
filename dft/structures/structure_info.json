@@ -1,0 +1,288 @@
+{
+  "created": "2026-03-02T19:39:39.882842",
+  "system": "GaN",
+  "base_cif": "/mnt/c/Ali/microscopy datasets/MLIP/cifs/GaN_mp-804_conventional_standard.cif",
+  "structures": [
+    {
+      "id": "GaN_bulk_prim",
+      "filename": "GaN_bulk_prim.cif",
+      "filepath": "/mnt/c/Ali/microscopy datasets/MLIP/dft/structures/GaN_bulk_prim.cif",
+      "n_atoms": 4,
+      "atom_counts": {
+        "Ga": 2,
+        "N": 2
+      },
+      "supercell_size": [
+        1,
+        1,
+        1
+      ],
+      "tags": [
+        "bulk",
+        "prim"
+      ],
+      "parent_id": null,
+      "notes": "4-atom wurtzite GaN cell from CIF (P1 setting)."
+    },
+    {
+      "id": "GaN_bulk_sc_2x2x2",
+      "filename": "GaN_bulk_sc_2x2x2.cif",
+      "filepath": "/mnt/c/Ali/microscopy datasets/MLIP/dft/structures/GaN_bulk_sc_2x2x2.cif",
+      "n_atoms": 32,
+      "atom_counts": {
+        "Ga": 16,
+        "N": 16
+      },
+      "supercell_size": [
+        2,
+        2,
+        2
+      ],
+      "tags": [
+        "bulk",
+        "supercell"
+      ],
+      "parent_id": "GaN_bulk_prim",
+      "notes": ""
+    },
+    {
+      "id": "GaN_defect_V_Ga_sc_2x2x2",
+      "filename": "GaN_defect_V_Ga_sc_2x2x2.cif",
+      "filepath": "/mnt/c/Ali/microscopy datasets/MLIP/dft/structures/GaN_defect_V_Ga_sc_2x2x2.cif",
+      "n_atoms": 31,
+      "atom_counts": {
+        "Ga": 15,
+        "N": 16
+      },
+      "supercell_size": [
+        2,
+        2,
+        2
+      ],
+      "tags": [
+        "defect",
+        "vacancy",
+        "V_Ga",
+        "supercell"
+      ],
+      "parent_id": "GaN_bulk_sc_2x2x2",
+      "notes": "Removed Ga atom index 16 (closest to cell center)."
+    },
+    {
+      "id": "GaN_defect_V_N_sc_2x2x2",
+      "filename": "GaN_defect_V_N_sc_2x2x2.cif",
+      "filepath": "/mnt/c/Ali/microscopy datasets/MLIP/dft/structures/GaN_defect_V_N_sc_2x2x2.cif",
+      "n_atoms": 31,
+      "atom_counts": {
+        "Ga": 16,
+        "N": 15
+      },
+      "supercell_size": [
+        2,
+        2,
+        2
+      ],
+      "tags": [
+        "defect",
+        "vacancy",
+        "V_N",
+        "supercell"
+      ],
+      "parent_id": "GaN_bulk_sc_2x2x2",
+      "notes": "Removed N atom index 11 (closest to cell center)."
+    },
+    {
+      "id": "GaN_bulk_sc_2x2x2__rattle00",
+      "filename": "GaN_bulk_sc_2x2x2__rattle00.cif",
+      "filepath": "/mnt/c/Ali/microscopy datasets/MLIP/dft/structures/GaN_bulk_sc_2x2x2__rattle00.cif",
+      "n_atoms": 32,
+      "atom_counts": {
+        "Ga": 16,
+        "N": 16
+      },
+      "supercell_size": [
+        2,
+        2,
+        2
+      ],
+      "tags": [
+        "rattle",
+        "bulk"
+      ],
+      "parent_id": "GaN_bulk_sc_2x2x2",
+      "notes": "Random displacement rattle amp=0.05 A seed=222000"
+    },
+    {
+      "id": "GaN_bulk_sc_2x2x2__rattle01",
+      "filename": "GaN_bulk_sc_2x2x2__rattle01.cif",
+      "filepath": "/mnt/c/Ali/microscopy datasets/MLIP/dft/structures/GaN_bulk_sc_2x2x2__rattle01.cif",
+      "n_atoms": 32,
+      "atom_counts": {
+        "Ga": 16,
+        "N": 16
+      },
+      "supercell_size": [
+        2,
+        2,
+        2
+      ],
+      "tags": [
+        "rattle",
+        "bulk"
+      ],
+      "parent_id": "GaN_bulk_sc_2x2x2",
+      "notes": "Random displacement rattle amp=0.05 A seed=222010"
+    },
+    {
+      "id": "GaN_defect_V_Ga_sc_2x2x2__rattle00",
+      "filename": "GaN_defect_V_Ga_sc_2x2x2__rattle00.cif",
+      "filepath": "/mnt/c/Ali/microscopy datasets/MLIP/dft/structures/GaN_defect_V_Ga_sc_2x2x2__rattle00.cif",
+      "n_atoms": 31,
+      "atom_counts": {
+        "Ga": 15,
+        "N": 16
+      },
+      "supercell_size": [
+        2,
+        2,
+        2
+      ],
+      "tags": [
+        "rattle",
+        "defect"
+      ],
+      "parent_id": "GaN_defect_V_Ga_sc_2x2x2",
+      "notes": "Random displacement rattle amp=0.05 A seed=222000"
+    },
+    {
+      "id": "GaN_defect_V_Ga_sc_2x2x2__rattle01",
+      "filename": "GaN_defect_V_Ga_sc_2x2x2__rattle01.cif",
+      "filepath": "/mnt/c/Ali/microscopy datasets/MLIP/dft/structures/GaN_defect_V_Ga_sc_2x2x2__rattle01.cif",
+      "n_atoms": 31,
+      "atom_counts": {
+        "Ga": 15,
+        "N": 16
+      },
+      "supercell_size": [
+        2,
+        2,
+        2
+      ],
+      "tags": [
+        "rattle",
+        "defect"
+      ],
+      "parent_id": "GaN_defect_V_Ga_sc_2x2x2",
+      "notes": "Random displacement rattle amp=0.05 A seed=222010"
+    },
+    {
+      "id": "GaN_defect_V_N_sc_2x2x2__rattle00",
+      "filename": "GaN_defect_V_N_sc_2x2x2__rattle00.cif",
+      "filepath": "/mnt/c/Ali/microscopy datasets/MLIP/dft/structures/GaN_defect_V_N_sc_2x2x2__rattle00.cif",
+      "n_atoms": 31,
+      "atom_counts": {
+        "Ga": 16,
+        "N": 15
+      },
+      "supercell_size": [
+        2,
+        2,
+        2
+      ],
+      "tags": [
+        "rattle",
+        "defect"
+      ],
+      "parent_id": "GaN_defect_V_N_sc_2x2x2",
+      "notes": "Random displacement rattle amp=0.05 A seed=222000"
+    },
+    {
+      "id": "GaN_defect_V_N_sc_2x2x2__rattle01",
+      "filename": "GaN_defect_V_N_sc_2x2x2__rattle01.cif",
+      "filepath": "/mnt/c/Ali/microscopy datasets/MLIP/dft/structures/GaN_defect_V_N_sc_2x2x2__rattle01.cif",
+      "n_atoms": 31,
+      "atom_counts": {
+        "Ga": 16,
+        "N": 15
+      },
+      "supercell_size": [
+        2,
+        2,
+        2
+      ],
+      "tags": [
+        "rattle",
+        "defect"
+      ],
+      "parent_id": "GaN_defect_V_N_sc_2x2x2",
+      "notes": "Random displacement rattle amp=0.05 A seed=222010"
+    },
+    {
+      "id": "GaN_bulk_sc_2x2x2__strain00",
+      "filename": "GaN_bulk_sc_2x2x2__strain00.cif",
+      "filepath": "/mnt/c/Ali/microscopy datasets/MLIP/dft/structures/GaN_bulk_sc_2x2x2__strain00.cif",
+      "n_atoms": 32,
+      "atom_counts": {
+        "Ga": 16,
+        "N": 16
+      },
+      "supercell_size": [
+        2,
+        2,
+        2
+      ],
+      "tags": [
+        "bulk",
+        "supercell",
+        "strain"
+      ],
+      "parent_id": "GaN_bulk_sc_2x2x2",
+      "notes": "Small random symmetric strain (1%) for off-equilibrium data."
+    },
+    {
+      "id": "GaN_bulk_sc_2x2x2__rattle02_00__20260302_194750",
+      "filename": "GaN_bulk_sc_2x2x2__rattle02_00__20260302_194750.cif",
+      "filepath": "/mnt/c/Ali/microscopy datasets/MLIP/dft/structures/GaN_bulk_sc_2x2x2__rattle02_00__20260302_194750.cif",
+      "n_atoms": 32,
+      "atom_counts": {
+        "Ga": 16,
+        "N": 16
+      },
+      "supercell_size": [
+        2,
+        2,
+        2
+      ],
+      "tags": [
+        "bulk",
+        "rattle",
+        "supercell"
+      ],
+      "parent_id": "GaN_bulk_sc_2x2x2",
+      "notes": "Added gentle rattle amp=0.02 A seed=93000"
+    },
+    {
+      "id": "GaN_bulk_sc_2x2x2__rattle02_01__20260302_194750",
+      "filename": "GaN_bulk_sc_2x2x2__rattle02_01__20260302_194750.cif",
+      "filepath": "/mnt/c/Ali/microscopy datasets/MLIP/dft/structures/GaN_bulk_sc_2x2x2__rattle02_01__20260302_194750.cif",
+      "n_atoms": 32,
+      "atom_counts": {
+        "Ga": 16,
+        "N": 16
+      },
+      "supercell_size": [
+        2,
+        2,
+        2
+      ],
+      "tags": [
+        "bulk",
+        "rattle",
+        "supercell"
+      ],
+      "parent_id": "GaN_bulk_sc_2x2x2",
+      "notes": "Added gentle rattle amp=0.02 A seed=93010"
+    }
+  ],
+  "last_updated": "2026-03-02T19:47:50.498952"
+}

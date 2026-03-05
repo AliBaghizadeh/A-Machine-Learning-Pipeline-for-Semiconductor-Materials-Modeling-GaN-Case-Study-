@@ -1,0 +1,44 @@
+(ymno3_gpu) PS C:\Ali\microscopy datasets\MLIP> conda list | findstr "torch"
+libopenvino-pytorch-frontend            2025.2.0               hac47afa_1              conda-forge
+pytorch-msssim                          1.0.0                  pypi_0                  pypi
+torch                                   2.8.0+cu128            pypi_0                  pypi
+torchvision                             0.23.0+cu128           pypi_0                  pypi
+
+(ymno3_gpu) PS C:\Ali\microscopy datasets\MLIP> conda list | findstr "cuda"
+cuda-cccl_win-64                        13.0.85                h57928b3_0              conda-forge
+cuda-cudart-dev_win-64                  13.0.96                hac47afa_0              conda-forge
+cuda-cudart-static_win-64               13.0.96                hac47afa_0              conda-forge
+cuda-cudart_win-64                      13.0.96                hac47afa_0              conda-forge
+cuda-nvrtc                              13.0.88                hac47afa_0              conda-forge
+cuda-version                            13.0                   hc7b4dd1_3              conda-forge
+python -c "import torch; print(torch.__version__); print(torch.version.cuda)"
+2.8.0+cu128
+12.8
+
+✅ All packages successfully installed!
+✅ ASE: OK
+✅ GPAW: OK
+✅ MACE: OK
+✅ PyTorch with CUDA: True
+✅ GPU: NVIDIA GeForce RTX 5080
+✅ GPU Memory: 17.094475776 GB
+
+
+(mlip_env) ali_linux@AliPC:/mnt/c/Ali/microscopy datasets/MLIP$ mpirun --version
+HYDRA build details:
+    Version:                                 4.3.0
+    Release Date:                            Mon Oct 27 11:35:41 EDT 2025
+    CC:                              x86_64-conda-linux-gnu-cc -I/home/ali_linux/miniforge3/envs/mlip_env/include  -I/home/ali_linux/miniforge3/envs/mlip_env/include  -L/home/ali_linux/miniforge3/envs/mlip_env/lib -Wl,-rpath,/home/ali_linux/miniforge3/envs/mlip_env/lib -Wl,-rpath-link,/home/ali_linux/miniforge3/envs/mlip_env/lib
+    Configure options:                       '--disable-option-checking' '--prefix=/home/ali_linux/miniforge3/envs/mlip_env' '--with-sysroot=/home/conda/feedstock_root/build_artifacts/mvapich_1771705414126/_build_env/x86_64-conda-linux-gnu/sysroot' '--enable-fortran=all' '--enable-nemesis-shm-collectives' '--enable-romio' '--enable-static=no' '--with-device=ch4:ucx,ofi' '--with-libfabric=/home/ali_linux/miniforge3/envs/mlip_env' '--with-libfabric-include=/home/ali_linux/miniforge3/envs/mlip_env/include' '--with-libfabric-lib=/home/ali_linux/miniforge3/envs/mlip_env/lib' '--with-ucx=/home/ali_linux/miniforge3/envs/mlip_env' '--disable-dependency-tracking' '--with-wrapper-dl-type=none' '--with-dl-type=none' 'build_alias=x86_64-conda-linux-gnu' 'host_alias=x86_64-conda-linux-gnu' 'CC=x86_64-conda-linux-gnu-cc' 'CFLAGS=-I/home/ali_linux/miniforge3/envs/mlip_env/include -O2' 'LDFLAGS=-L/home/ali_linux/miniforge3/envs/mlip_env/lib -Wl,-rpath,/home/ali_linux/miniforge3/envs/mlip_env/lib -Wl,-rpath-link,/home/ali_linux/miniforge3/envs/mlip_env/lib ' 'CPPFLAGS=-I/home/ali_linux/miniforge3/envs/mlip_env/include -I/home/conda/feedstock_root/build_artifacts/mvapich_1771705414126/work/mvapich/src/mpl/include -I/home/conda/feedstock_root/build_artifacts/mvapich_1771705414126/work/mvapich/modules/json-c -D_REENTRANT -I/home/conda/feedstock_root/build_artifacts/mvapich_1771705414126/work/mvapich/src/mpi/romio/include -I/home/conda/feedstock_root/build_artifacts/mvapich_1771705414126/work/mvapich/src/pmi/include -I/home/conda/feedstock_root/build_artifacts/mvapich_1771705414126/work/mvapich/modules/yaksa/src/frontend/include' 'CPP=/home/conda/feedstock_root/build_artifacts/mvapich_1771705414126/_build_env/bin/x86_64-conda-linux-gnu-cpp' 'CXX=x86_64-conda-linux-gnu-c++' 'CXXFLAGS=-I/home/ali_linux/miniforge3/envs/mlip_env/include -O2' 'FC=x86_64-conda-linux-gnu-gfortran' 'FCFLAGS=-I/home/ali_linux/miniforge3/envs/mlip_env/include -fallow-argument-mismatch -O2' 'FFLAGS=-I/home/ali_linux/miniforge3/envs/mlip_env/include -fallow-argument-mismatch -O2' '--cache-file=/dev/null' '--srcdir=.' 'LIBS= '
+    Process Manager:                         pmi
+    Launchers available:                     ssh rsh fork slurm ll lsf sge manual persist
+    Topology libraries available:            hwloc
+    Resource management kernels available:   user slurm ll lsf sge pbs cobalt
+    Demux engines available:                 poll select
+(mlip_env) ali_linux@AliPC:/mnt/c/Ali/microscopy datasets/MLIP$ mpicc --version
+/home/ali_linux/miniforge3/envs/mlip_env/bin/mpicc: line 345: x86_64-conda-linux-gnu-cc: command not found
+(base) ali_linux@AliPC:/mnt/c/Ali/microscopy datasets/MLIP$ ls $HOME/gpaw-data 2>/dev/null && echo "GPAW datasets already installed" || echo "Need to install GPAW datasets"
+gpaw-setups-24.11.0
+GPAW datasets already installed
+
+

@@ -1,0 +1,21 @@
+# Demo config: Acceptance gates (source-of-truth for the showcase)
+
+energy_gate:
+  threshold_eV_per_atom: 0.01
+  cases:
+    - structure_id: GaN_bulk_sc_4x4x4_relaxed
+      cif: dft/structures/GaN_bulk_sc_4x4x4_relaxed.cif
+    - structure_id: GaN_vacancy_line_N_sc_4x4x4_relaxed
+      cif: dft/structures/GaN_vacancy_line_N_sc_4x4x4_relaxed.cif
+
+force_gate:
+  structure_id: GaN_vacancy_line_N_sc_4x4x4_relaxed
+  cif: dft/structures/GaN_vacancy_line_N_sc_4x4x4_relaxed.cif
+  dft_source: sr
+  use_dft_geometry: true
+  selection: coord
+  coord_rcut_A: 2.4
+  coord_max: 3
+  mae_thresh_eV_per_A: 0.25
+  max_thresh_eV_per_A: 1.0
+

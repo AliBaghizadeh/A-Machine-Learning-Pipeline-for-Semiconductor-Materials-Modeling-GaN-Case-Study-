@@ -1,0 +1,69 @@
+# Conda environment for Lu1-xScxFeO3 MLIP Project
+# Optimized for WSL with NVIDIA GPU (RTX 5080)
+# PyTorch comes with its own CUDA - works with your CUDA 13.1 driver
+
+name: mlip_env
+channels:
+  - conda-forge
+  - pytorch
+  - nvidia
+  - defaults
+
+dependencies:
+  # Python 3.10 (required for GPAW compatibility)
+  - python=3.10
+  - pip
+
+  # Core Scientific Computing
+  - numpy
+  - scipy
+  - matplotlib
+  - pandas
+  - h5py
+  - cython
+
+  # Jupyter
+  - jupyter
+  - jupyterlab
+  - ipykernel
+
+  # ASE (Atomic Simulation Environment)
+  - ase
+  - spglib
+  - pymatgen
+
+  # GPAW (DFT Code)
+  - gpaw
+  - libxc
+  - blas
+  - lapack
+  - scalapack
+  - fftw
+
+  # PyTorch with CUDA Support
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=12.1
+
+  # MLIP Dependencies
+  - e3nn
+
+  # Additional Tools
+  - tqdm
+  - requests
+  - streamlit
+  - pyyaml
+  - jsonschema
+
+  # Development Tools
+  - black
+  - flake8
+  - pytest
+
+  # Pip Packages
+  - pip:
+    - mace-torch
+    - nequip
+    - wandb
+    - matminer

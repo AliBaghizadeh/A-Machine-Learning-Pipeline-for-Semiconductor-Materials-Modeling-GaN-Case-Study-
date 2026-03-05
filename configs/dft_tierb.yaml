@@ -1,0 +1,15 @@
+# Demo config: Tier-B DFT settings (for documentation / comparison only)
+# The Streamlit app must never run DFT.
+
+project: GaN
+tier_b:
+  default_calc_type: single_point
+  gpu: true
+  scf_overrides:
+    maxiter: 25
+    convergence:
+      energy: 1.0e-3
+      density: 1.0e-2
+      eigenstates: 1.0e-4
+  gpu_ecut_eV: 350
+

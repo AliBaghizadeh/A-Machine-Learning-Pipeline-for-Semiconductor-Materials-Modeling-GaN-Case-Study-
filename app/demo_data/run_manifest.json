@@ -1,0 +1,233 @@
+{
+  "demo": true,
+  "created": "2026-03-04T15:07:58.187687",
+  "project": "GaN (offline demo)",
+  "device_used_for_gates": "cuda",
+  "frozen": {
+    "model_path": "/mnt/c/Ali/microscopy datasets/MLIP/mlip/results/mace_run_20260304_112648/checkpoints/gan_mace_run-42.model",
+    "dataset_dir": "/mnt/c/Ali/microscopy datasets/MLIP/mlip/data/datasets/dataset_20260304_112646",
+    "dft_json": "/mnt/c/Ali/microscopy datasets/MLIP/dft/results/tier_b_results.json"
+  },
+  "dataset": {
+    "dataset_stats": {
+      "total_structures": 29,
+      "total_structures_full": 31,
+      "max_atoms_filter": 300,
+      "train": 23,
+      "val": 2,
+      "test": 4,
+      "sources": {
+        "tier_a": 0,
+        "tier_b_sp": 23,
+        "tier_b_sr": 6
+      },
+      "created": "2026-03-04T11:26:46.765489"
+    }
+  },
+  "training_summary": {
+    "started": "2026-03-04T11:40:54.052906",
+    "run_dir": "/mnt/c/Ali/microscopy datasets/MLIP/mlip/results/mace_run_20260304_112648",
+    "train_file": "/tmp/mlip_fast_io/dataset_20260304_112648/train.xyz",
+    "val_file": "/tmp/mlip_fast_io/dataset_20260304_112648/val.xyz",
+    "n_train_structures": 23,
+    "n_val_structures": 2,
+    "command": [
+      "mace_run_train",
+      "--name",
+      "gan_mace",
+      "--work_dir",
+      "/mnt/c/Ali/microscopy datasets/MLIP/mlip/results/mace_run_20260304_112648",
+      "--model_dir",
+      "/mnt/c/Ali/microscopy datasets/MLIP/mlip/models",
+      "--results_dir",
+      "/mnt/c/Ali/microscopy datasets/MLIP/mlip/results",
+      "--checkpoints_dir",
+      "/mnt/c/Ali/microscopy datasets/MLIP/mlip/results/mace_run_20260304_112648/checkpoints",
+      "--log_dir",
+      "/mnt/c/Ali/microscopy datasets/MLIP/mlip/results/mace_run_20260304_112648/logs",
+      "--device",
+      "cuda",
+      "--default_dtype",
+      "float32",
+      "--model",
+      "MACE",
+      "--train_file",
+      "/tmp/mlip_fast_io/dataset_20260304_112648/train.xyz",
+      "--E0s",
+      "average",
+      "--energy_key",
+      "energy",
+      "--forces_key",
+      "forces",
+      "--stress_key",
+      "stress",
+      "--num_workers",
+      "12",
+      "--pin_memory",
+      "True",
+      "--batch_size",
+      "4",
+      "--max_num_epochs",
+      "80",
+      "--patience",
+      "10",
+      "--eval_interval",
+      "20",
+      "--lr",
+      "0.0001",
+      "--weight_decay",
+      "1e-08",
+      "--energy_weight",
+      "10.0",
+      "--forces_weight",
+      "10.0",
+      "--stress_weight",
+      "0.1",
+      "--r_max",
+      "5.0",
+      "--num_radial_basis",
+      "8",
+      "--num_cutoff_basis",
+      "5",
+      "--max_ell",
+      "3",
+      "--correlation",
+      "3",
+      "--num_interactions",
+      "2",
+      "--MLP_irreps",
+      "16x0e",
+      "--seed",
+      "42",
+      "--num_channels",
+      "128",
+      "--max_L",
+      "3",
+      "--valid_file",
+      "/tmp/mlip_fast_io/dataset_20260304_112648/val.xyz",
+      "--atomic_numbers",
+      "[31,7]",
+      "--amsgrad",
+      "--ema",
+      "--ema_decay",
+      "0.99"
+    ],
+    "logs": {
+      "stdout_log": "/mnt/c/Ali/microscopy datasets/MLIP/mlip/results/mace_run_20260304_112648/mace_stdout.log",
+      "epoch_device_log": "/mnt/c/Ali/microscopy datasets/MLIP/mlip/results/mace_run_20260304_112648/epoch_device_log.jsonl",
+      "profiler": {
+        "trace": "/mnt/c/Ali/microscopy datasets/MLIP/mlip/results/mace_run_20260304_112648/profiler/torch_profile_trace.json",
+        "summary": "/mnt/c/Ali/microscopy datasets/MLIP/mlip/results/mace_run_20260304_112648/profiler/torch_profile_summary.txt"
+      },
+      "staged_data_dir": "/tmp/mlip_fast_io/dataset_20260304_112648"
+    }
+  },
+  "gates": {
+    "energy_gate": {
+      "threshold_eV_per_atom": 0.01,
+      "pass": true,
+      "results": [
+        {
+          "structure_id": "GaN_bulk_sc_4x4x4_relaxed",
+          "pass": true,
+          "abs_de_per_atom_eV": 0.005309073979537615
+        },
+        {
+          "structure_id": "GaN_vacancy_line_N_sc_4x4x4_relaxed",
+          "pass": true,
+          "abs_de_per_atom_eV": 0.006978830522967432
+        }
+      ]
+    },
+    "force_gate": {
+      "pass": true,
+      "selected_atoms": 37,
+      "total_atoms": 252,
+      "selection": "coord",
+      "selected_mae_eV_per_A": 0.18783,
+      "selected_max_eV_per_A": 0.368122
+    }
+  },
+  "copied_files": [
+    {
+      "src": "/mnt/c/Ali/microscopy datasets/MLIP/app/demo_data/rag/demo_paper_snippet.txt",
+      "dst": "rag/demo_paper_snippet.txt",
+      "sha256": "326351d55d436dab45bbc8e6d70dd5e593357ad414bee49c812987cc81de0610",
+      "bytes": 436
+    },
+    {
+      "src": "/mnt/c/Ali/microscopy datasets/MLIP/dft/structures/GaN_bulk_sc_2x2x2.cif",
+      "dst": "structures/GaN_bulk_sc_2x2x2.cif",
+      "sha256": "9b6a23fbdddf3f75b0a058da9c0b69030a86ee63974a42c6b421a9887cc35190",
+      "bytes": 3002
+    },
+    {
+      "src": "/mnt/c/Ali/microscopy datasets/MLIP/dft/structures/GaN_bulk_sc_4x4x4_relaxed.cif",
+      "dst": "structures/GaN_bulk_sc_4x4x4_relaxed.cif",
+      "sha256": "ddf87ec89c29e6cb9513bc51ec973c522804289b6d48294b5b53a19235ab5cdc",
+      "bytes": 21018
+    },
+    {
+      "src": "/mnt/c/Ali/microscopy datasets/MLIP/dft/structures/GaN_vacancy_line_N_sc_4x4x4_relaxed.cif",
+      "dst": "structures/GaN_vacancy_line_N_sc_4x4x4_relaxed.cif",
+      "sha256": "7ab54f6c45479ef12a06166ae09a99cca1db78df5b6a100eeed892967754352b",
+      "bytes": 23284
+    },
+    {
+      "src": "/mnt/c/Ali/microscopy datasets/MLIP/analysis/results/final_structures/GaN_vacancy_line_N_sc_4x4x4_relaxed__DFT_SR_final.cif",
+      "dst": "structures/GaN_vacancy_line_N_sc_4x4x4_relaxed__DFT_SR_final.cif",
+      "sha256": "4844b7e36829e722f4f7f5cae9a04e87279586623f82d489aa17d571ba23825f",
+      "bytes": 23226
+    },
+    {
+      "src": "/mnt/c/Ali/microscopy datasets/MLIP/mlip/data/datasets/dataset_20260304_112646/dataset_stats.json",
+      "dst": "dataset/dataset_stats.json",
+      "sha256": "bb38b2e24ea04940a5597899dd27ffa2373245c9b49f815b685f1c70adc1f7c5",
+      "bytes": 246
+    },
+    {
+      "src": "/mnt/c/Ali/microscopy datasets/MLIP/mlip/results/training_summary.json",
+      "dst": "mlip/training_summary.json",
+      "sha256": "d02afa97408e22aa3cddced06dfee91498858abbf7c1e1bcef5ad366a03af00f",
+      "bytes": 2597
+    },
+    {
+      "src": "/mnt/c/Ali/microscopy datasets/MLIP/analysis/results/validation_results.json",
+      "dst": "analysis/validation_results.json",
+      "sha256": "985251f4b95cd3e5c7091b9536dd37e071c5a4edd7f119da32403aa6c197f5f4",
+      "bytes": 885
+    },
+    {
+      "src": "/mnt/c/Ali/microscopy datasets/MLIP/analysis/results/mlip_validation.json",
+      "dst": "analysis/mlip_validation.json",
+      "sha256": "5de5af660a010dc347c4ef8ecaceb50f1411abb785ebb6189352c3c28d5ae292",
+      "bytes": 542
+    },
+    {
+      "src": "/mnt/c/Ali/microscopy datasets/MLIP/analysis/results/structural_summary.json",
+      "dst": "analysis/structural_summary.json",
+      "sha256": "759cb3004e2abe5950d283837e882f331a0c3bd26b48ac7d66bb11112752c58a",
+      "bytes": 1590
+    },
+    {
+      "src": "/mnt/c/Ali/microscopy datasets/MLIP/analysis/results/scf_convergence_C1b_mini_line_sp.png",
+      "dst": "plots/scf_convergence_C1b_mini_line_sp.png",
+      "sha256": "405f4073524211d9e902b33011b46f6b88afd6e8f0139f93eba2859cde7d64d3",
+      "bytes": 89137
+    },
+    {
+      "src": "/mnt/c/Ali/microscopy datasets/MLIP/analysis/results/scf_convergence_C2_mini_line_sr.png",
+      "dst": "plots/scf_convergence_C2_mini_line_sr.png",
+      "sha256": "23e897cbdb463129fc97d5ea30286b5a078960c2684b72e8767bd50285c4607d",
+      "bytes": 163697
+    }
+  ],
+  "raw_gate_stdout": {
+    "energy_gate": "/home/ali_linux/miniforge3/envs/mlip_env/lib/python3.10/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.\n  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))\n/home/ali_linux/miniforge3/envs/mlip_env/lib/python3.10/site-packages/mace/calculators/mace.py:199: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.\n  torch.load(f=model_path, map_location=device)\nWARNING:root:No dtype selected, switching to float32 to match model dtype.\ncuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.\nenergy_gate:\n  model=/mnt/c/Ali/microscopy datasets/MLIP/mlip/results/mace_run_20260304_112648/checkpoints/gan_mace_run-42.model\n  dft_json=/mnt/c/Ali/microscopy datasets/MLIP/dft/results/tier_b_results.json\n  device=cuda\n  threshold=0.01 eV/atom\n  cases:\n    - GaN_bulk_sc_4x4x4_relaxed -> dft/structures/GaN_bulk_sc_4x4x4_relaxed.cif\n    - GaN_vacancy_line_N_sc_4x4x4_relaxed -> dft/structures/GaN_vacancy_line_N_sc_4x4x4_relaxed.cif\nGaN_bulk_sc_4x4x4_relaxed PASS= True |dE|/atom= 0.005309073979537615 eV/atom\nGaN_vacancy_line_N_sc_4x4x4_relaxed PASS= True |dE|/atom= 0.006978830522967432 eV/atom\nENERGY_GATE_PASS=True (criterion: all |dE|/atom <= 0.01 eV/atom)\n",
+    "force_gate": "/home/ali_linux/miniforge3/envs/mlip_env/lib/python3.10/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.\n  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))\n/home/ali_linux/miniforge3/envs/mlip_env/lib/python3.10/site-packages/mace/calculators/mace.py:199: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.\n  torch.load(f=model_path, map_location=device)\nWARNING:root:No dtype selected, switching to float32 to match model dtype.\ncuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.\nstructure_id=GaN_vacancy_line_N_sc_4x4x4_relaxed\ndft_source=tier_b_sr (requested=sr)\ngeometry=/mnt/c/Ali/microscopy datasets/MLIP/dft/results/trajectories/tierb_short_relax_GaN_vacancy_line_N_sc_4x4x4_relaxed.traj\ncif_arg=dft/structures/GaN_vacancy_line_N_sc_4x4x4_relaxed.cif\nmodel=/mnt/c/Ali/microscopy datasets/MLIP/mlip/results/mace_run_20260304_112648/checkpoints/gan_mace_run-42.model\ndevice=cuda\nselection=coord selected_atoms=37 total_atoms=252\noverall:  mae=0.171245 rmse=0.213502 max=0.381949 eV/A\nselected: mae=0.187830 rmse=0.223854 max=0.368122 eV/A\nFORCE_GATE_PASS=True (criteria: selected_mae<=0.25 and selected_max<=1.0 eV/A)\n"
+  },
+  "gate_return_codes": {
+    "energy_gate": 0,
+    "force_gate": 0
+  }
+}

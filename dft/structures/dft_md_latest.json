@@ -1,0 +1,37 @@
+{
+  "run_tag": "20260304_092116",
+  "input_cif": "/mnt/c/Ali/microscopy datasets/MLIP/dft/structures/GaN_bulk_sc_2x2x2.cif",
+  "trajectory": "/mnt/c/Ali/microscopy datasets/MLIP/dft/results/trajectories/dft_md_GaN_bulk_sc_2x2x2__20260304_092116.traj",
+  "temperature_K": 300.0,
+  "steps": 5,
+  "dt_fs": 1.0,
+  "friction_1_per_fs": 0.02,
+  "seed": 0,
+  "gpu": true,
+  "supercell_size": [
+    2,
+    2,
+    2
+  ],
+  "exported_frames": [
+    {
+      "structure_id": "GaN_bulk_sc_2x2x2__md300K_frame000__20260304_092116",
+      "frame_index": 0,
+      "cif": "/mnt/c/Ali/microscopy datasets/MLIP/dft/structures/GaN_bulk_sc_2x2x2__md300K_frame000__20260304_092116.cif",
+      "natoms": 32
+    },
+    {
+      "structure_id": "GaN_bulk_sc_2x2x2__md300K_frame002__20260304_092116",
+      "frame_index": 2,
+      "cif": "/mnt/c/Ali/microscopy datasets/MLIP/dft/structures/GaN_bulk_sc_2x2x2__md300K_frame002__20260304_092116.cif",
+      "natoms": 32
+    },
+    {
+      "structure_id": "GaN_bulk_sc_2x2x2__md300K_frame005__20260304_092116",
+      "frame_index": 5,
+      "cif": "/mnt/c/Ali/microscopy datasets/MLIP/dft/structures/GaN_bulk_sc_2x2x2__md300K_frame005__20260304_092116.cif",
+      "natoms": 32
+    }
+  ],
+  "elapsed_s": 31.510013103485107
+}

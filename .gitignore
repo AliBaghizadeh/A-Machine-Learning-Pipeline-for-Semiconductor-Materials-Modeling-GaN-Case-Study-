@@ -1,0 +1,35 @@
+# Python/cache
+**/__pycache__/
+*.pyc
+.pytest_cache/
+
+# IDE/system
+.vscode/
+.DS_Store
+
+# Computed outputs (do not version)
+dft/results/
+mlip/results/
+mlip/models/
+mlip/data/datasets/
+analysis/artifacts/
+analysis/results/
+rag/index/
+
+# Local paper corpora / private sources
+literature/
+rag/sources/
+
+# App generated demo payloads (keep only static visuals/text as needed)
+app/demo_data/dataset/
+app/demo_data/gates/
+app/demo_data/mlip/
+app/demo_data/structures/
+app/demo_data/stem/
+
+# Keep these directories structure with placeholders if desired
+!app/demo_data/.gitkeep
+!app/demo_data/plots/
+!app/demo_data/plots/**
+!app/demo_data/rag/
+!app/demo_data/rag/**

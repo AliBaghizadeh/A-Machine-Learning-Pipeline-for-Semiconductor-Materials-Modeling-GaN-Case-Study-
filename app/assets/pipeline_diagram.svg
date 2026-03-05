@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Offline demo diagram (no external assets). Palette:
+  DFT steps: teal
+  ML training: orange
+  Validation: purple
+  Observables (STEM): green
+  RAG: gray
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="GaN DFT + MLIP pipeline diagram">
+  <defs>
+    <style>
+      .title { font: 700 18px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; fill: #111827; }
+      .label { font: 600 14px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; fill: #111827; }
+      .small { font: 500 12px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; fill: #374151; }
+      .box { rx: 14; ry: 14; stroke: #111827; stroke-width: 1.3; }
+      .arrow { stroke: #111827; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .lane { stroke: #E5E7EB; stroke-width: 1; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#111827"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="360" fill="#FFFFFF"/>
+  <text x="24" y="34" class="title">GaN DFT + MLIP Pipeline Demo (Offline)</text>
+
+  <!-- Main lane -->
+  <line x1="24" y1="64" x2="1176" y2="64" class="lane"/>
+
+  <!-- Boxes -->
+  <!-- CIF -->
+  <rect x="24" y="90" width="190" height="70" class="box" fill="#F9FAFB"/>
+  <text x="44" y="122" class="label">CIF / Structures</text>
+  <text x="44" y="144" class="small">GaN bulk, defects, MD</text>
+
+  <!-- DFT Tier-B -->
+  <rect x="250" y="90" width="210" height="70" class="box" fill="#CFFAFE"/>
+  <text x="270" y="122" class="label">DFT Tier-B (GPAW)</text>
+  <text x="270" y="144" class="small">SP labels (fast)</text>
+
+  <!-- Dataset extract -->
+  <rect x="496" y="90" width="210" height="70" class="box" fill="#CFFAFE"/>
+  <text x="516" y="122" class="label">extxyz extraction</text>
+  <text x="516" y="144" class="small">train/val/test split</text>
+
+  <!-- MACE train -->
+  <rect x="742" y="90" width="210" height="70" class="box" fill="#FFEDD5"/>
+  <text x="762" y="122" class="label">MACE Training</text>
+  <text x="762" y="144" class="small">outputs .model</text>
+
+  <!-- Gates -->
+  <rect x="988" y="90" width="188" height="70" class="box" fill="#E9D5FF"/>
+  <text x="1008" y="122" class="label">Validation Gates</text>
+  <text x="1008" y="144" class="small">energy + force checks</text>
+
+  <!-- MLIP relax / exploration -->
+  <rect x="742" y="190" width="210" height="74" class="box" fill="#FFEDD5"/>
+  <text x="762" y="222" class="label">MLIP Relaxation</text>
+  <text x="762" y="244" class="small">large supercells, fast</text>
+
+  <!-- STEM -->
+  <rect x="988" y="196" width="188" height="62" class="box" fill="#DCFCE7"/>
+  <text x="1008" y="226" class="label">STEM Simulation</text>
+  <text x="1008" y="248" class="small">HAADF (abTEM)</text>
+
+  <!-- RAG sidecar -->
+  <rect x="24" y="210" width="190" height="94" class="box" fill="#F3F4F6"/>
+  <text x="44" y="242" class="label">RAG Sidecar</text>
+  <text x="44" y="264" class="small">papers → DFT params</text>
+  <text x="44" y="286" class="small">compare to local run</text>
+
+  <!-- Arrows -->
+  <path d="M214 125 L250 125" class="arrow"/>
+  <path d="M460 125 L496 125" class="arrow"/>
+  <path d="M706 125 L742 125" class="arrow"/>
+  <path d="M952 125 L988 125" class="arrow"/>
+
+  <!-- Train -> relax -> gates -->
+  <path d="M847 160 L847 190" class="arrow"/>
+  <path d="M952 227 L988 227" class="arrow"/>
+  <path d="M952 125 L988 125" class="arrow"/>
+  <path d="M952 227 L988 125" class="arrow"/>
+
+  <!-- RAG -> compare (gates) -->
+  <path d="M214 257 L988 125" class="arrow"/>
+
+  <!-- Legend -->
+  <text x="24" y="334" class="small">Legend:</text>
+  <rect x="82" y="322" width="16" height="16" class="box" fill="#CFFAFE"/>
+  <text x="106" y="335" class="small">DFT</text>
+  <rect x="156" y="322" width="16" height="16" class="box" fill="#FFEDD5"/>
+  <text x="180" y="335" class="small">ML training / MLIP</text>
+  <rect x="310" y="322" width="16" height="16" class="box" fill="#E9D5FF"/>
+  <text x="334" y="335" class="small">Validation</text>
+  <rect x="432" y="322" width="16" height="16" class="box" fill="#DCFCE7"/>
+  <text x="456" y="335" class="small">Observables (STEM)</text>
+  <rect x="596" y="322" width="16" height="16" class="box" fill="#F3F4F6"/>
+  <text x="620" y="335" class="small">RAG</text>
+</svg>
+

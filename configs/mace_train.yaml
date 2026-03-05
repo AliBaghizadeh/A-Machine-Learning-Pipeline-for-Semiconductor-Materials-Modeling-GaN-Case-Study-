@@ -1,0 +1,23 @@
+# Demo config: MACE training settings (for documentation / comparison only)
+
+project: GaN
+training:
+  max_epochs: 80
+  patience: 10
+  eval_interval: 20
+  batch_size: 4
+  lr: 1.0e-4
+  weight_decay: 1.0e-8
+loss_weights:
+  energy_weight: 10.0
+  forces_weight: 10.0
+  stress_weight: 0.1
+mace_model:
+  r_max: 5.0
+  num_radial_basis: 8
+  num_cutoff_basis: 5
+  max_ell: 3
+  correlation: 3
+  num_interactions: 2
+  num_channels: 128
+

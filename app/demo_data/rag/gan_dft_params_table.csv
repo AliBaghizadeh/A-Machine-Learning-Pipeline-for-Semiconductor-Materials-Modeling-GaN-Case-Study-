@@ -1,0 +1,4 @@
+param,value,citation
+xc_functional,PBE,demo_paper_snippet.txt#chunk0
+xc_functional,GGA,demo_paper_snippet.txt#chunk0
+kpoints,6x6x4,demo_paper_snippet.txt#chunk0

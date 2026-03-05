@@ -1,0 +1,1 @@
+# DFT module for Lu1-xScxFeO3 MLIP project
