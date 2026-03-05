@@ -110,7 +110,6 @@ def main():
         {"Data": "Training Runs", "Location": "mlip/results/"},
         {"Data": "Demo Artifacts", "Location": "analysis/artifacts/"},
         {"Data": "RAG Papers", "Location": "literature/ (or rag/sources/)"},
-        {"Data": "STEM Outputs (demo)", "Location": "app/demo_data/stem/"},
     ]
     st.dataframe(loc_rows, width="stretch", hide_index=True)
 

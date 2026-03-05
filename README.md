@@ -11,7 +11,7 @@ This repository focuses on **code, scripts, and configuration**. Heavy results a
 ## What This Project Demonstrates
 - A clean end-to-end workflow from physics-based reference calculations (DFT) to fast ML-driven structure exploration.
 - A production-style project layout with reproducible CLI entry points.
-- Offline Streamlit demo pages for pipeline status, quality checks, relaxation demo, RAG summary, and STEM showcase.
+- Offline Streamlit demo pages for pipeline status, quality checks, relaxation demo, and RAG summary.
 - Practical guardrails: validation gates before using the ML model on larger systems.
 
 ## Why This Matters
@@ -32,7 +32,7 @@ For a higher-level overview of the project, see:
 |   |-- pages/
 |   `-- demo_data/plots/     # static images used in README/app
 |-- analysis/
-|   `-- scripts/             # quality checks, STEM helpers, analysis
+|   `-- scripts/             # quality checks and analysis
 |-- configs/                 # YAML configs for training/gates/DFT settings
 |-- dft/
 |   |-- scripts/             # DFT labeling / structure utilities
@@ -79,7 +79,7 @@ analysis/scripts/force_gate.py --model path/to/model.model --structure-id GaN_va
 ```bash
 make demo
 ```
-Open the shown local URL to explore pipeline status, quality checks, ML relaxation demo, RAG assistant, and STEM outputs.
+Open the shown local URL to explore pipeline status, quality checks, ML relaxation demo, and the RAG assistant.
 
 ## License
 This project is licensed under the MIT License. See [`LICENSE`](LICENSE).

@@ -4,7 +4,6 @@ Offline demo diagram (no external assets). Palette:
   DFT steps: teal
   ML training: orange
   Validation: purple
-  Observables (STEM): green
   RAG: gray
 -->
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="GaN DFT + MLIP pipeline diagram">
@@ -59,11 +58,6 @@ Offline demo diagram (no external assets). Palette:
   <text x="762" y="222" class="label">MLIP Relaxation</text>
   <text x="762" y="244" class="small">large supercells, fast</text>
 
-  <!-- STEM -->
-  <rect x="988" y="196" width="188" height="62" class="box" fill="#DCFCE7"/>
-  <text x="1008" y="226" class="label">STEM Simulation</text>
-  <text x="1008" y="248" class="small">HAADF (abTEM)</text>
-
   <!-- RAG sidecar -->
   <rect x="24" y="210" width="190" height="94" class="box" fill="#F3F4F6"/>
   <text x="44" y="242" class="label">RAG Sidecar</text>
@@ -78,9 +72,7 @@ Offline demo diagram (no external assets). Palette:
 
   <!-- Train -> relax -> gates -->
   <path d="M847 160 L847 190" class="arrow"/>
-  <path d="M952 227 L988 227" class="arrow"/>
   <path d="M952 125 L988 125" class="arrow"/>
-  <path d="M952 227 L988 125" class="arrow"/>
 
   <!-- RAG -> compare (gates) -->
   <path d="M214 257 L988 125" class="arrow"/>
@@ -93,9 +85,6 @@ Offline demo diagram (no external assets). Palette:
   <text x="180" y="335" class="small">ML training / MLIP</text>
   <rect x="310" y="322" width="16" height="16" class="box" fill="#E9D5FF"/>
   <text x="334" y="335" class="small">Validation</text>
-  <rect x="432" y="322" width="16" height="16" class="box" fill="#DCFCE7"/>
-  <text x="456" y="335" class="small">Observables (STEM)</text>
-  <rect x="596" y="322" width="16" height="16" class="box" fill="#F3F4F6"/>
-  <text x="620" y="335" class="small">RAG</text>
+  <rect x="432" y="322" width="16" height="16" class="box" fill="#F3F4F6"/>
+  <text x="456" y="335" class="small">RAG</text>
 </svg>
-
