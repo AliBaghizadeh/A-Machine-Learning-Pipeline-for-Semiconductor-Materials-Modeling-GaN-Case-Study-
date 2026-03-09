@@ -12,6 +12,35 @@ The project is structured as a practical pipeline rather than a loose collection
 
 Only the demo interface is offline-first by default. The full project is compute-oriented and can be run on local workstations, HPC clusters, or cloud GPU environments depending on your DFT and ML training needs.
 
+## Problem This Project Solves
+Semiconductor defect modeling quickly becomes expensive once structures grow beyond small reference cells. Physics-based calculations such as DFT provide trustworthy energies and forces, but they are too slow to use as the only engine for repeated relaxation, defect exploration, and downstream simulation on larger supercells.
+
+This project addresses that gap with a practical workflow:
+- use DFT where accuracy matters most
+- learn a surrogate interatomic model from those DFT labels
+- validate the learned model against DFT before trusting it
+- use the trained model to relax larger defect structures much faster
+
+The result is a workflow that stays physically grounded while becoming more scalable for exploration, screening, and downstream analysis.
+
+## What The Pipeline Does
+At a high level, the repository implements a closed loop for defect-focused materials modeling:
+
+1. Start from clean and defective GaN crystal structures.
+2. Run DFT reference calculations to obtain energies and forces.
+3. Extract those results into a training-ready atomistic dataset.
+4. Fit a MACE-based ML interatomic potential on the DFT labels.
+5. Check the model with explicit energy and force validation gates.
+6. Use the trained model on larger defective structures that would be costly to explore with DFT alone.
+7. Feed the relaxed structures into downstream tasks such as STEM-like simulation, literature-grounded summaries, or targeted DFT spot-checks.
+
+## Why GaN And Why Defects
+GaN is a useful case study because it is technologically important and defect-sensitive. Vacancies and larger defect motifs can influence structure, stability, and downstream observable behavior. That makes GaN a good demonstration system for a pipeline that must connect:
+- atomic structures
+- accurate reference physics
+- scalable learned models
+- downstream materials and metrology workflows
+
 Reproducible codebase for a practical workflow:
 
 `Crystal structure -> DFT reference labeling -> dataset extraction -> ML potential training -> large-cell relaxation -> quality checks`
@@ -30,6 +59,12 @@ This repository focuses on **code, scripts, and configuration**. Heavy results a
 - DFT is accurate but expensive for large cells.
 - ML potentials are fast but must be checked against reference calculations.
 - Combining both enables scalable, credible materials modeling for semiconductor defect studies.
+
+## What You Can Show With This Repository
+- **Reference physics on small cells:** clean bulk and defect structures can be labeled with DFT energies and forces.
+- **Learned acceleration on larger cells:** the trained MLIP can relax larger defect structures in a fraction of the cost of routine DFT-only workflows.
+- **Validation before scale-up:** energy and force gates provide a simple trust check before using the model on larger systems.
+- **Downstream reuse:** relaxed structures can be used for microscopy-like image simulation, literature comparison, and targeted electronic-structure follow-up.
 
 ## How This Scales and Extends
 - **Larger structures:** train on curated DFT labels, then run ML relaxations on much larger supercells that are impractical for routine DFT-only loops.
