@@ -21,6 +21,11 @@ def main():
     root = Path(__file__).resolve().parents[1]
     demo_dir = get_demo_dir()
 
+    # Optional branding (user-provided).
+    logo_path = root / "app" / "demo_data" / "plots" / "Top Logo.png"
+    if logo_path.exists():
+        st.image(str(logo_path), width="stretch")
+
     st.title("GaN DFT + MLIP Pipeline Demo")
     st.caption("Offline Materials AI Pipeline Demonstration")
     st.markdown(
