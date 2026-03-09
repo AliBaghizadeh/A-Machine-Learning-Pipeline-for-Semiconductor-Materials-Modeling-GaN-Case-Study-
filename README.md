@@ -38,6 +38,8 @@ This repository focuses on **code, scripts, and configuration**. Heavy results a
 - **Materials design workflows:** use the trained potential for fast screening of defect configurations, strain states, and composition variants before expensive DFT confirmation.
 - **Deployment flexibility:** keep the same scripts/configs while scaling execution from laptop prototyping to cluster/cloud orchestration.
 
+![DFT to MLIP workflow](app/demo_data/plots/DFT%20to%20MLIP.png)
+
 ## Core Packages
 - [MACE (mace-torch)](https://github.com/ACEsuit/mace) - ML interatomic potential framework used for training/inference
 - [PyTorch](https://pytorch.org/) - deep learning backend for MACE
